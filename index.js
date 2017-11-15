@@ -120,7 +120,7 @@ let reuseCount = 0;
 
 function wrap() {
   //  Wrap the module into a function so that all Google Cloud resources are properly disposed.
-  const sgcloud = require('sigfox-gcloud'); //  sigfox-gcloud Framework
+  const sgcloud = require('sigfox-aws'); //  sigfox-aws Framework
   // const googlemetadata = require('sigfox-gcloud/lib/google-metadata');  //  For accessing Google Metadata.
   const googlemetadata = awsmetadata;
   let wrapCount = 0;
