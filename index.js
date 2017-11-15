@@ -9,7 +9,7 @@
 //  Environment Variables:
 //  NODE_ENV=production
 //  AUTOINSTALL_DEPENDENCY= sigfox-aws-data
-//  AUTOINSTALL_VERSION= >=0.0.3
+//  AUTOINSTALL_VERSION= >=0.0.4
 //  sigfox_dbclient=mysql
 //  sigfox_dbhost=mysql host address
 //  sigfox_dbuser=mysql user
