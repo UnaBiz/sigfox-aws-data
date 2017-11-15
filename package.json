@@ -1,6 +1,6 @@
 {
   "name": "sigfox-aws-data",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "sigfox-aws adapter for writing to SQL databases",
   "main": "index.js",
   "scripts": {
