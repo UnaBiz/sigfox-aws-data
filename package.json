@@ -9,11 +9,13 @@
   },
   "keywords": [
     "sigfox",
-    "ubidots",
+    "mysql",
+    "postgres",
+    "mssql",
+    "oracle",
+    "knex",
     "aws",
-    "functions",
     "lambda",
-    "functions",
     "iot"
   ],
   "author": {
@@ -26,10 +28,13 @@
     "node": ">=7.8.0"
   },
   "dependencies": {
-    "dnscache": "^1.0.1",
     "dotenv": "^4.0.0",
+    "dnscache": "^1.0.1",
     "json-stringify-safe": "^5.0.1",
+    "knex": "^0.13.0",
+    "mysql": "^2.15.0",
     "node-fetch": "^1.6.3",
+    "pg": "^7.3.0",
     "request": "^2.34.0",
     "safe-buffer": "5.0.1",
     "sigfox-aws": ">=0.0.17",
