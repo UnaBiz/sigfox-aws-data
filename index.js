@@ -310,7 +310,11 @@ function wrap() {
           body.timestamp = new Date(parseInt(body.timestamp, 10));
         }
         //  Insert the record.
-        return db(table).insert(body);
+        return db(table).insert(body)
+          .catch((error) => {
+            sgcloud.error(req, 'task', { error, device, body, table, reuseCount, wrapCount });
+            return error;  //  Suppress error.
+          });
       })
       .then(result => sgcloud.log(req, 'task', { result, device, body, table, reuseCount, wrapCount }))
       //  Return the message for the next processing step.
