@@ -28,24 +28,9 @@
     "node": ">=7.8.0"
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "dnscache": "^1.0.1",
-    "json-stringify-safe": "^5.0.1",
     "knex": "^0.13.0",
     "mysql": "^2.15.0",
-    "node-fetch": "^1.6.3",
-    "pg": "^7.3.0",
-    "request": "^2.34.0",
-    "safe-buffer": "5.0.1",
-    "sigfox-aws": ">=0.0.22",
-    "uuid": "^3.1.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "should": "^11.2.1",
-    "supertest-as-promised": "^4.0.2",
-    "supertest": "^3.0.0"
+    "sigfox-aws": ">=0.0.22"
   },
   "repository": {
     "type": "git",
