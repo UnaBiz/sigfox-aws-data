@@ -30,7 +30,7 @@
   "dependencies": {
     "knex": "^0.13.0",
     "mysql": "^2.15.0",
-    "sigfox-aws": ">=0.0.28"
+    "sigfox-aws": ">=0.0.29"
   },
   "repository": {
     "type": "git",
