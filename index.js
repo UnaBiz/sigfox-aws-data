@@ -88,6 +88,7 @@ const metadataKeys = {   //  Keys we use and their default values, before prepen
 const sensorfields = (tbl) => ({
   uuid: [tbl.uuid, false, 'Primary key: Unique message ID in UUID format, e.g. 4cf3ad36-3d3e-415c-a25b-9f8ab2bb4466'],
   timestamp: [tbl.timestamp, true, 'Timestamp of message receipt at basestation., e.g. 1507798768000'],
+  localdatetime: [tbl.string, false, 'Human-readable local datetime, e.g. 2017-10-12 08:59:29'],
 
   alt: [tbl.float, false, 'Altitude in metres above sea level, used by send-alt-structured demo, e.g. 86.4'],
   avgSnr: [tbl.float, false, 'Sigfox average signal-to-noise ratio, e.g. 59.84'],
@@ -96,7 +97,7 @@ const sensorfields = (tbl) => ({
   baseStationTime: [tbl.integer, false, 'Sigfox timestamp of message receipt at basestation, in seconds since epoch (1/1/1970), e.g. 1507798768'],
   // callbackTimestamp: [f => tbl.timestamp.bind(tbl)(f).defaultTo(knex.fn.now()), false, 'Timestamp at which sigfoxCallback was called, e.g. 1507798769710'],
   data: [tbl.string, false, 'Sigfox message data, e.g. b0510001a421f90194056003'],
-  datetime: [tbl.string, false, 'Human-readable datetime, e.g. 2017-10-12 08:59:29'],
+  datetime: [tbl.string, false, 'Human-readable UTC datetime, e.g. 2017-10-12 08:59:29'],
   device: [tbl.string, true, 'Sigfox device ID, e.g. 2C1C85'],
   deviceLat: [tbl.float, false, 'Latitude of GPS tracker e.g. UnaTumbler.'],
   deviceLng: [tbl.float, false, 'Longitude of GPS tracker e.g. UnaTumbler.'],
