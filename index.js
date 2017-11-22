@@ -286,6 +286,7 @@ function wrap() {
     //  Handle the Sigfox received by adding it to the sensordata table.
     //  Database connection settings are read from Google Compute Metadata.
     //  If the sensordata table is missing, it will be created.
+    console.log({ wrapCount }); //
     let metadata = null;
     let table = null;
     const body = Object.assign({}, body0);
@@ -351,8 +352,8 @@ module.exports = {
     let result = null;
     return wrapper.serveQueue(event)
       .then((res) => { result = res; })
-      //  Tear down the Knex pool or AWS Lambda will not terminate.
-      .then(() => (db && process.env.AWS_LAMBDA_FUNCTION_NAME) ? db.destroy() : 'skipped')
+      //  If DESTROYPOOL is set in environment, tear down the Knex pool or AWS Lambda will not terminate.
+      .then(() => (db && process.env.DESTROYPOOL) ? db.destroy() : 'skipped')
       .then(() => result)
       //  Suppress the error or Google Cloud will call the function again.
       .catch(error => error);
