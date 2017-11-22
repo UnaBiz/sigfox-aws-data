@@ -352,7 +352,7 @@ module.exports = {
     return wrapper.serveQueue(event)
       .then((res) => { result = res; })
       //  Tear down the Knex pool or AWS Lambda will not terminate.
-      .then(() => process.env.AWS_LAMBDA_FUNCTION_NAME ? knex.destroy() : 'skipped')
+      .then(() => (db && process.env.AWS_LAMBDA_FUNCTION_NAME) ? db.destroy() : 'skipped')
       .then(() => result)
       //  Suppress the error or Google Cloud will call the function again.
       .catch(error => error);
